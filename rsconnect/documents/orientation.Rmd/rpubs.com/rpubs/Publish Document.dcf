@@ -1,0 +1,10 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/1285576/461eb02f263a4bc4b760324ff5e94010
+bundleId: https://api.rpubs.com/api/v1/document/1285576/461eb02f263a4bc4b760324ff5e94010
+url: http://rpubs.com/professornaite/1285576
+version: 1

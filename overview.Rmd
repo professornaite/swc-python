@@ -1,0 +1,56 @@
+---
+title: "Writing Python syntax in RMarkdown"
+author: 
+- "Nathan Alexander"
+- "Center for Applied Data Science and Analytics"
+- "Howard University"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float: true  # Enable floating TOC in the sidebar
+    number_sections: true
+    theme: cerulean
+    always_allow_html: true
+    self_contained: true
+editor_options:
+  markdown:
+    wrap: sentence
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Good news: RMarkdown and knitr support Python syntax!
+
+In this file, I review how to integrate both R and Python syntax into a single RMarkdown file. This integration may be useful for several reasons and especially for those users who work with both software programs. The syntax for an RMarkdown allows us to create reports and operate a host of objects. However, to work with Python syntax, we'll need to initiate a few items first.
+
+## The Reticulate package
+
+The Reticulate package is a Python interpreter in R. You can learn more about the package [here](https://rstudio.github.io/reticulate/).
+
+Note that the code chunks below uses the ```{r} heading.
+
+```{r}
+# install.packages("reticulate")
+library(reticulate)
+```
+
+Take note that we'll need to go back and forth between using R and Python in .Rmd by setting up our code chunks using the appropriate code preface.
+
+---
+
+## A brief tutorial
+
+I will use the swc-python tutorial to outline some base code that can be used in the RMarkdown. 
+
+Please first follow the setup instructions [here](https://swcarpentry.github.io/python-novice-inflammation/02-numpy.html).
+
+Note that the code chunks below use the ```{python} heading.
+
+```{python}
+import numpy
+numpy.loadtxt(fname='data/inflammation-01.csv', delimiter=',')
+```
+
